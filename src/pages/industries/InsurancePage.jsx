@@ -41,9 +41,6 @@ const InsurancePage = () => {
               <h2 className="text-3xl font-bold text-white mb-4">{content.sections[0].title}</h2>
               <p className="text-gray-300 text-lg leading-relaxed">{content.sections[0].description}</p>
             </div>
-            <div className="h-64 lg:h-80 rounded-xl overflow-hidden">
-              <img  className="w-full h-full object-cover" alt={content.sections[0].image} src="https://images.unsplash.com/photo-1683701844845-114d77be00ef" />
-            </div>
           </div>
         </motion.div>
 

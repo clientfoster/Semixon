@@ -19,12 +19,12 @@ const ContactInfo = () => {
   ];
 
   const departments = [
-    { name: 'General Inquiries', email: 'info@mirafra.com' },
-    { name: 'Sales & Business Development', email: 'sales@mirafra.com' },
-    { name: 'Technical Support', email: 'support@mirafra.com' },
-    { name: 'Careers & HR', email: 'careers@mirafra.com' },
-    { name: 'Media & Press', email: 'press@mirafra.com' },
-    { name: 'Partnerships', email: 'partnerships@mirafra.com' }
+    { name: 'General Inquiries', email: 'info@NXTsilicon.com' },
+    { name: 'Sales & Business Development', email: 'sales@NXTsilicon.com' },
+    { name: 'Technical Support', email: 'support@NXTsilicon.com' },
+    { name: 'Careers & HR', email: 'careers@NXTsilicon.com' },
+    { name: 'Media & Press', email: 'press@NXTsilicon.com' },
+    { name: 'Partnerships', email: 'partnerships@NXTsilicon.com' }
   ];
 
   return (

@@ -6,7 +6,7 @@ import { toast } from '@/components/ui/use-toast';
 import BenefitsSection from '@/components/careers/BenefitsSection';
 import OpenPositions from '@/components/careers/OpenPositions';
 import CultureSection from '@/components/careers/CultureSection';
-import LifeAtMirafra from '@/components/careers/LifeAtMirafra';
+import LifeAtNXTsilicon from '@/components/careers/LifeAtNXTsilicon';
 
 const Careers = () => {
   const handleClick = () => {
@@ -160,7 +160,7 @@ const Careers = () => {
       <BenefitsSection benefits={benefits} />
       <OpenPositions openPositions={openPositions} handleClick={handleClick} />
       <CultureSection culture={culture} />
-      <LifeAtMirafra />
+      <LifeAtNXTsilicon />
 
       <section className="py-20 relative">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

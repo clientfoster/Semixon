@@ -172,7 +172,6 @@ const Solutions = () => {
                     whileHover={{ scale: 1.02 }}
                     className="glass neon-border rounded-2xl overflow-hidden hover-lift"
                   >
-                    <img  alt={solution.title} className="w-full h-80 object-cover" src="https://images.unsplash.com/photo-1595872018818-97555653a011" />
                   </motion.div>
                 </div>
               </motion.div>
@@ -297,7 +296,6 @@ const Solutions = () => {
                 onClick={handleClick}
               >
                 <div className="h-48 bg-gradient-to-br from-green-400/20 to-blue-500/20">
-                  <img  alt={`Case study ${caseStudy}`} className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1661679538354-01ca763b12b9" />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-white mb-3">

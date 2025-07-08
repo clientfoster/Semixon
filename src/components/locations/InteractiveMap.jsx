@@ -27,7 +27,6 @@ const InteractiveMap = ({ handleClick }) => {
           className="glass neon-border rounded-2xl p-8 text-center hover-lift"
         >
           <div className="h-96 bg-gradient-to-br from-green-400/10 to-blue-500/10 rounded-xl flex items-center justify-center">
-            <img alt="World map showing Mirafra Technologies global office locations" className="w-full h-full object-contain opacity-80" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4" />
           </div>
           <div className="mt-6">
             <h3 className="text-2xl font-bold text-white mb-4">Interactive Office Map</h3>

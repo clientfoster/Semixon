@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook } from 'lucide-react';
 import { toast } from '@/components/ui/use-toast';
 
-const Footer = () => {
+const Footer = ({ theme }) => {
   const handleLinkClick = () => {
     toast({
       title: "🚧 Feature Coming Soon!",
@@ -75,21 +75,21 @@ const Footer = () => {
                 <img src="/logo.png" alt="Logo" className="w-8 h-8 object-contain" />
                 <span className="text-2xl font-bold gradient-text">NXTsilicon</span>
               </div>
-              <p className="text-gray-400 max-w-md">
+              <p className={`${theme === 'light' ? 'text-black' : 'text-gray-400'} max-w-md`}>
                 Leading provider of engineering services, semiconductor solutions, and technology consulting. 
                 Empowering innovation through cutting-edge technology and exceptional expertise.
               </p>
               
               <div className="space-y-2">
-                <div className="flex items-center space-x-2 text-gray-400">
+                <div className={`flex items-center space-x-2 ${theme === 'light' ? 'text-black' : 'text-gray-400'}`}>
                   <Mail className="w-4 h-4 text-green-400" />
-                  <span>info@mirafra.com</span>
+                  <span>info@NXTsilicon.com</span>
                 </div>
-                <div className="flex items-center space-x-2 text-gray-400">
+                <div className={`flex items-center space-x-2 ${theme === 'light' ? 'text-black' : 'text-gray-400'}`}>
                   <Phone className="w-4 h-4 text-green-400" />
                   <span>+1 (555) 123-4567</span>
                 </div>
-                <div className="flex items-center space-x-2 text-gray-400">
+                <div className={`flex items-center space-x-2 ${theme === 'light' ? 'text-black' : 'text-gray-400'}`}>
                   <MapPin className="w-4 h-4 text-green-400" />
                   <span>Silicon Valley, CA</span>
                 </div>
@@ -130,7 +130,7 @@ const Footer = () => {
                   <li key={link.name}>
                     <Link
                       to={link.path}
-                      className="text-gray-400 hover:text-green-400 transition-colors duration-300"
+                      className={`${theme === 'light' ? 'text-black' : 'text-gray-400'} hover:text-green-400 transition-colors duration-300`}
                     >
                       {link.name}
                     </Link>
@@ -151,7 +151,7 @@ const Footer = () => {
               <ul className="space-y-2">
                 {footerSections[2].links.map((link) => (
                   <li key={link.name}>
-                     <Link to={link.path} className="text-gray-400 hover:text-green-400 transition-colors duration-300">
+                     <Link to={link.path} className={`${theme === 'light' ? 'text-black' : 'text-gray-400'} hover:text-green-400 transition-colors duration-300`}>
                         {link.name}
                       </Link>
                   </li>
@@ -166,17 +166,17 @@ const Footer = () => {
           viewport={{ once: true }}
           className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
         >
-          <p className="text-gray-400 text-sm">
-            © 2025 Mirafra Technologies. All rights reserved.
+          <p className={`${theme === 'light' ? 'text-black' : 'text-gray-400'} text-sm`}>
+            © 2025 NXTsilicon Technologies. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <button onClick={handleLinkClick} className="text-gray-400 hover:text-green-400 text-sm transition-colors">
+            <button onClick={handleLinkClick} className={`${theme === 'light' ? 'text-black' : 'text-gray-400'} hover:text-green-400 text-sm transition-colors`}>
               Privacy Policy
             </button>
-            <button onClick={handleLinkClick} className="text-gray-400 hover:text-green-400 text-sm transition-colors">
+            <button onClick={handleLinkClick} className={`${theme === 'light' ? 'text-black' : 'text-gray-400'} hover:text-green-400 text-sm transition-colors`}>
               Terms of Service
             </button>
-            <button onClick={handleLinkClick} className="text-gray-400 hover:text-green-400 text-sm transition-colors">
+            <button onClick={handleLinkClick} className={`${theme === 'light' ? 'text-black' : 'text-gray-400'} hover:text-green-400 text-sm transition-colors`}>
               Cookie Policy
             </button>
           </div>

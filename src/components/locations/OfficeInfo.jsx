@@ -52,19 +52,19 @@ const OfficeInfo = ({ handleClick }) => {
             <div className="space-y-4">
               <div>
                 <span className="text-gray-400 block mb-1">General Inquiries</span>
-                <span className="text-white">info@mirafra.com</span>
+                <span className="text-white">info@NXTsilicon.com</span>
               </div>
               <div>
                 <span className="text-gray-400 block mb-1">Business Development</span>
-                <span className="text-white">business@mirafra.com</span>
+                <span className="text-white">business@NXTsilicon.com</span>
               </div>
               <div>
                 <span className="text-gray-400 block mb-1">Careers</span>
-                <span className="text-white">careers@mirafra.com</span>
+                <span className="text-white">careers@NXTsilicon.com</span>
               </div>
               <div>
                 <span className="text-gray-400 block mb-1">Support</span>
-                <span className="text-white">support@mirafra.com</span>
+                <span className="text-white">support@NXTsilicon.com</span>
               </div>
             </div>
             <Button

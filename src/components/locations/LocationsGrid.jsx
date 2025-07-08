@@ -34,7 +34,6 @@ const LocationsGrid = ({ locations, handleClick }) => {
               onClick={handleClick}
             >
               <div className="h-48 bg-gradient-to-br from-green-400/20 to-blue-500/20">
-                <img alt={location.name} className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab" />
               </div>
               
               <div className="p-6">

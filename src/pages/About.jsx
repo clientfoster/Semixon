@@ -94,7 +94,7 @@ const About = () => {
             className="text-center mb-16"
           >
             <h1 className="text-5xl md:text-6xl font-bold gradient-text mb-6">
-              About Mirafra
+              About NXTsilicon
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto">
               Pioneering technology solutions since 2009, we've been at the forefront of 
@@ -111,7 +111,7 @@ const About = () => {
             >
               <h2 className="text-3xl font-bold text-white">Our Story</h2>
               <p className="text-gray-400 text-lg leading-relaxed">
-                Founded with a vision to revolutionize the semiconductor industry, Mirafra Technologies 
+                Founded with a vision to revolutionize the semiconductor industry, NXTsilicon Technologies 
                 has grown from a small startup to a global leader in engineering services. Our journey 
                 began with a simple belief: that innovation thrives when brilliant minds collaborate 
                 to solve complex challenges.
@@ -136,7 +136,6 @@ const About = () => {
               className="relative"
             >
               <div className="glass neon-border rounded-2xl p-8 hover-lift">
-                <img  alt="Mirafra Technologies headquarters building" className="w-full h-64 object-cover rounded-lg mb-6" src="https://images.unsplash.com/photo-1633901230483-e6663be56210" />
                 <div className="grid grid-cols-2 gap-4">
                   <div className="text-center">
                     <div className="text-2xl font-bold gradient-text">500+</div>
@@ -213,7 +212,7 @@ const About = () => {
               Leadership Team
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Meet the visionaries driving innovation and excellence at Mirafra Technologies.
+              Meet the visionaries driving innovation and excellence at NXTsilicon Technologies.
             </p>
           </motion.div>
 
@@ -230,7 +229,6 @@ const About = () => {
                 onClick={handleClick}
               >
                 <div className="h-64 bg-gradient-to-br from-green-400/20 to-blue-500/20">
-                  <img  alt={`${leader.name} - ${leader.position}`} className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1595956553066-fe24a8c33395" />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-white mb-2">{leader.name}</h3>
@@ -304,7 +302,7 @@ const About = () => {
               Join Our Mission
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Be part of a team that's shaping the future of technology. Explore career opportunities at Mirafra.
+              Be part of a team that's shaping the future of technology. Explore career opportunities at NXTsilicon.
             </p>
             <Button
               onClick={handleClick}

@@ -130,7 +130,7 @@ function App() {
             <Route path="/services/engineering-and-technical-services" element={<EngineeringTechnicalServicesPage />} />
           </Routes>
         </main>
-        <Footer />
+        <Footer theme={theme} />
         <Toaster />
       </div>
     </Router>

@@ -32,7 +32,6 @@ const ServicePageLayout = ({
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="lg:order-2">
               <div className="h-64 lg:h-80 rounded-xl overflow-hidden neon-shadow-primary">
-                 <img  className="w-full h-full object-cover" alt={imageAlt || title} src="https://images.unsplash.com/photo-1595872018818-97555653a011" />
               </div>
             </div>
             <div className="lg:order-1">

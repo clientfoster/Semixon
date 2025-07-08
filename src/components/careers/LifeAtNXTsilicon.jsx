@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const LifeAtMirafra = () => {
+const LifeAtNXTsilicon = () => {
   return (
     <section className="py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -12,7 +12,7 @@ const LifeAtMirafra = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-6">
-            Life at Mirafra
+            Life at NXTsilicon
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             Get a glimpse of our vibrant workplace and the amazing people who make it special.
@@ -30,7 +30,6 @@ const LifeAtMirafra = () => {
               whileHover={{ scale: 1.02 }}
               className="glass neon-border rounded-xl overflow-hidden hover-lift"
             >
-              <img alt={`Team photo ${photo}`} className="w-full h-64 object-cover" src="https://images.unsplash.com/photo-1651009188116-bb5f80eaf6aa" />
               <div className="p-6">
                 <h3 className="text-lg font-semibold text-white mb-2">
                   {photo === 1 ? 'Innovation Sessions' : photo === 2 ? 'Team Collaboration' : 'Company Events'}
@@ -52,4 +51,4 @@ const LifeAtMirafra = () => {
   );
 };
 
-export default LifeAtMirafra;
+export default LifeAtNXTsilicon;

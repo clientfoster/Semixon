@@ -250,7 +250,6 @@ const Home = () => {
                 onClick={handleCTAClick}
               >
                 <div className="h-48 bg-gradient-to-br from-green-400/20 to-blue-500/20 flex items-center justify-center">
-                  <img  alt={`Featured project ${project}`} className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1571836840806-559779928c63" />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-white mb-3">
