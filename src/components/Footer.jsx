@@ -17,7 +17,6 @@ const Footer = ({ theme }) => {
       title: 'Company',
       links: [
         { name: 'About Us', path: '/about' },
-        { name: 'Careers', path: '/careers' },
         { name: 'Locations', path: '/locations' },
         { name: 'Contact Us', path: '/contact' }
       ]
@@ -62,8 +61,8 @@ const Footer = ({ theme }) => {
         ))}
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+      <div className="relative z-10 max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8 py-8 sm:py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8">
           <div className="lg:col-span-2">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -72,30 +71,30 @@ const Footer = ({ theme }) => {
               className="space-y-4"
             >
               <div className="flex items-center space-x-2">
-                <img src="/logo.png" alt="Logo" className="w-8 h-8 object-contain" />
-                <span className="text-2xl font-bold gradient-text">NXTsilicon</span>
+                <img src="/logo.png" alt="Logo" className="w-7 h-7 sm:w-8 sm:h-8 object-contain" />
+                <span className="text-xl sm:text-2xl font-bold gradient-text">NXTsilicon</span>
               </div>
-              <p className={`${theme === 'light' ? 'text-black' : 'text-gray-400'} max-w-md`}>
+              <p className={`${theme === 'light' ? 'text-black' : 'text-gray-400'} max-w-md text-xs sm:text-sm md:text-base`}>
                 Leading provider of engineering services, semiconductor solutions, and technology consulting. 
                 Empowering innovation through cutting-edge technology and exceptional expertise.
               </p>
               
               <div className="space-y-2">
-                <div className={`flex items-center space-x-2 ${theme === 'light' ? 'text-black' : 'text-gray-400'}`}>
+                <div className={`flex items-center space-x-2 ${theme === 'light' ? 'text-black' : 'text-gray-400'} text-xs sm:text-sm`}>
                   <Mail className="w-4 h-4 text-green-400" />
                   <span>info@NXTsilicon.com</span>
                 </div>
-                <div className={`flex items-center space-x-2 ${theme === 'light' ? 'text-black' : 'text-gray-400'}`}>
+                <div className={`flex items-center space-x-2 ${theme === 'light' ? 'text-black' : 'text-gray-400'} text-xs sm:text-sm`}>
                   <Phone className="w-4 h-4 text-green-400" />
-                  <span>+1 (555) 123-4567</span>
+                  <span>+91 9618055526</span>
                 </div>
-                <div className={`flex items-center space-x-2 ${theme === 'light' ? 'text-black' : 'text-gray-400'}`}>
+                <div className={`flex items-center space-x-2 ${theme === 'light' ? 'text-black' : 'text-gray-400'} text-xs sm:text-sm`}>
                   <MapPin className="w-4 h-4 text-green-400" />
-                  <span>Silicon Valley, CA</span>
+                  <span>H No 6-3-200/A, PREM NAGAR, Banjara Hills, Khairatabad, Hyderabad- 500034, Telangana</span>
                 </div>
               </div>
 
-              <div className="flex space-x-4 pt-4">
+              <div className="flex space-x-3 sm:space-x-4 pt-2 sm:pt-4">
                 {[
                   { icon: Linkedin, label: 'LinkedIn' },
                   { icon: Twitter, label: 'Twitter' },
@@ -106,7 +105,7 @@ const Footer = ({ theme }) => {
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
                     onClick={handleLinkClick}
-                    className="p-2 rounded-lg glass neon-border hover:neon-glow transition-all duration-300"
+                    className="p-1.5 sm:p-2 rounded-lg glass neon-border hover:neon-glow transition-all duration-300"
                   >
                     <Icon className="w-5 h-5 text-green-400" />
                   </motion.button>
@@ -145,7 +144,7 @@ const Footer = ({ theme }) => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="space-y-4 lg:col-span-1"
+              className="space-y-3 sm:space-y-4 lg:col-span-1"
             >
               <span className="text-lg font-semibold text-green-400">{footerSections[2].title}</span>
               <ul className="space-y-2">
@@ -164,12 +163,12 @@ const Footer = ({ theme }) => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
+          className="border-t border-gray-800 mt-8 sm:mt-12 pt-6 sm:pt-8 flex flex-col md:flex-row justify-between items-center gap-y-2"
         >
-          <p className={`${theme === 'light' ? 'text-black' : 'text-gray-400'} text-sm`}>
+          <p className={`${theme === 'light' ? 'text-black' : 'text-gray-400'} text-xs sm:text-sm`}>
             © 2025 NXTsilicon Technologies. All rights reserved.
           </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
+          <div className="flex flex-wrap space-x-4 sm:space-x-6 mt-2 sm:mt-0">
             <button onClick={handleLinkClick} className={`${theme === 'light' ? 'text-black' : 'text-gray-400'} hover:text-green-400 text-sm transition-colors`}>
               Privacy Policy
             </button>

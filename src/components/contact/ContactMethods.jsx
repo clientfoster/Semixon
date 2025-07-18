@@ -25,7 +25,7 @@ const ContactMethods = () => {
       icon: Phone,
       title: 'Call Us',
       description: 'Speak directly with our team during business hours.',
-      contact: '+1 (650) 555-0100',
+      contact: '+91 9618055526',
       action: 'Call Now',
       gradient: 'from-green-500 to-teal-600'
     },
@@ -33,7 +33,7 @@ const ContactMethods = () => {
       icon: MapPin,
       title: 'Visit Us',
       description: 'Come visit our headquarters in Silicon Valley.',
-      contact: '1234 Innovation Drive, Palo Alto, CA',
+      contact: 'H No 6-3-200/A, PREM NAGAR, Banjara Hills, Khairatabad, Hyderabad- 500034, Telangana',
       action: 'Get Directions',
       gradient: 'from-orange-500 to-red-600'
     }

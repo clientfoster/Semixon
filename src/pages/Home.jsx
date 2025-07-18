@@ -126,20 +126,25 @@ const Home = () => {
               transition={{ delay: 0.8 }}
             >
               <Button
+                asChild
                 size="lg"
-                onClick={handleCTAClick}
                 className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 neon-glow text-white px-8 py-3 text-lg"
               >
-                Explore Solutions
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <a href="/services">Explore Solutions<ArrowRight className="ml-2 w-5 h-5" /></a>
               </Button>
               <Button
-                variant="outline"
+                asChild
                 size="lg"
-                onClick={handleCTAClick}
+                variant="outline"
                 className="neon-border text-green-400 hover:bg-green-400/10 px-8 py-3 text-lg"
               >
-                Watch Demo
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSePFiwbi8eFMBx4mtiCmCJGjplPL0LBjRajEnGgaIR8WrnZ-Q/viewform?usp=header"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Start Your Project
+                </a>
               </Button>
             </motion.div>
           </motion.div>
@@ -197,6 +202,7 @@ const Home = () => {
       </section>
 
       {/* Stats Section */}
+      {/*
       <section className="py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -219,8 +225,10 @@ const Home = () => {
           </div>
         </div>
       </section>
+      */}
 
       {/* Featured Projects Section */}
+      {/*
       <section className="py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -271,6 +279,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+      */}
 
       {/* CTA Section */}
       <section className="py-20 relative">
@@ -288,12 +297,18 @@ const Home = () => {
               Partner with us to bring your most ambitious technology projects to life.
             </p>
             <Button
+              asChild
               size="lg"
-              onClick={handleCTAClick}
               className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 neon-glow text-white px-12 py-4 text-lg"
             >
-              Start Your Project
-              <ArrowRight className="ml-2 w-5 h-5" />
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSePFiwbi8eFMBx4mtiCmCJGjplPL0LBjRajEnGgaIR8WrnZ-Q/viewform?usp=header"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Start Your Project
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
             </Button>
           </motion.div>
         </div>

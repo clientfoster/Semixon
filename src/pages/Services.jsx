@@ -128,6 +128,7 @@ const Services = () => {
         {serviceCategories.map((category, categoryIndex) => (
           <motion.section
             key={category.name}
+            id={category.name.toLowerCase().includes('semiconductor') ? 'semiconductors' : category.name.toLowerCase().includes('embedded') ? 'embedded' : category.name.toLowerCase().includes('software') ? 'software' : undefined}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
@@ -191,17 +192,10 @@ const Services = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
-                onClick={handleClick}
+                asChild
                 className="bg-gradient-to-r from-primary to-blue-600 hover:from-primary/90 hover:to-blue-700/90 neon-glow-primary text-primary-foreground px-8 py-3 text-lg"
               >
-                Request Consultation <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-              <Button
-                variant="outline"
-                onClick={handleClick}
-                className="neon-border-primary text-primary hover:bg-primary/10 px-8 py-3 text-lg"
-              >
-                Download Brochure
+                <a href="/contact">Request Consultation <ArrowRight className="ml-2 w-5 h-5" /></a>
               </Button>
             </div>
           </motion.div>

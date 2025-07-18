@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 
 const PageLayout = ({ title, subtitle, children }) => {
   return (
-    <div className="min-h-screen pt-16">
-      <section className="py-20 relative overflow-hidden">
+    <div className="min-h-screen pt-14 sm:pt-16">
+      <section className="py-12 sm:py-16 md:py-20 relative overflow-hidden">
         <div className="absolute inset-0">
           {[...Array(30)].map((_, i) => (
             <div
@@ -22,17 +22,17 @@ const PageLayout = ({ title, subtitle, children }) => {
           ))}
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-5xl md:text-6xl font-bold gradient-text mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold gradient-text mb-4 sm:mb-6">
               {title}
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 max-w-2xl sm:max-w-3xl md:max-w-4xl mx-auto">
               {subtitle}
             </p>
           </motion.div>
@@ -42,7 +42,7 @@ const PageLayout = ({ title, subtitle, children }) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.8 }}
-        className="relative z-10 -mt-12 pb-24"
+        className="relative z-10 -mt-8 sm:-mt-12 pb-16 sm:pb-24"
       >
         {children}
       </motion.main>

@@ -7,8 +7,6 @@ import Home from '@/pages/Home';
 import About from '@/pages/About';
 import Services from '@/pages/Services';
 import Industries from '@/pages/Industries';
-import Careers from '@/pages/Careers';
-import Locations from '@/pages/Locations';
 import Contact from '@/pages/Contact';
 import AdminPanel from '@/pages/AdminPanel';
 
@@ -48,6 +46,7 @@ import ApplicationDevelopmentMaintenancePage from '@/pages/services/ApplicationD
 import QualityAssurancePage from '@/pages/services/QualityAssurancePage';
 import ItInfrastructurePage from '@/pages/services/ItInfrastructurePage';
 import EngineeringTechnicalServicesPage from '@/pages/services/EngineeringTechnicalServicesPage';
+import ScrollToHash from './ScrollToHash';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -79,6 +78,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToHash />
       <ScrollToTop />
       <div className={`min-h-screen animated-bg ${theme}`}>
         <Navbar theme={theme} toggleTheme={toggleTheme} />
@@ -88,8 +88,6 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
             <Route path="/industries" element={<Industries />} />
-            <Route path="/careers" element={<Careers />} />
-            <Route path="/locations" element={<Locations />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/admin" element={<AdminPanel />} />
             <Route path="/industries/semiconductor" element={<SemiconductorPage />} />

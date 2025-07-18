@@ -66,8 +66,6 @@ const Navbar = ({ theme, toggleTheme }) => {
         { name: 'Telecom and Network', path: '/industries/telecom-and-network' }
       ]
     },
-    { name: 'Careers', path: '/careers' },
-    { name: 'Locations', path: '/locations' },
     { name: 'Contact', path: '/contact' }
   ];
 
@@ -89,8 +87,8 @@ const Navbar = ({ theme, toggleTheme }) => {
         isScrolled ? 'bg-background/80 backdrop-blur-md border-b border-border/50' : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+      <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
+        <div className="flex flex-wrap justify-between items-center h-16 gap-y-2 md:gap-y-0">
           <div className="flex-shrink-0">
             <motion.div whileHover={{ scale: 1.05 }}>
               <Link to="/" className="flex items-center space-x-2" onClick={() => handleLinkClick(false)}>
@@ -100,7 +98,7 @@ const Navbar = ({ theme, toggleTheme }) => {
             </motion.div>
           </div>
 
-          <div className="hidden md:flex items-center space-x-1 lg:space-x-2">
+          <div className="hidden md:flex items-center space-x-1 lg:space-x-2 xl:space-x-4">
             {menuItems.map((item, index) => (
               <div
                 key={item.name}
@@ -111,7 +109,7 @@ const Navbar = ({ theme, toggleTheme }) => {
                 <Link
                   to={item.path}
                   onClick={() => handleLinkClick(!!(item.submenu || item.megamenu))}
-                  className={`px-2 lg:px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 flex items-center space-x-1 hover-lift ${
+                  className={`px-2 sm:px-3 lg:px-4 py-2 rounded-md text-xs sm:text-sm md:text-base font-medium transition-all duration-300 flex items-center space-x-1 hover-lift min-h-[44px] min-w-[44px] ${
                     location.pathname.startsWith(item.path) && item.path !== '/' || location.pathname === item.path
                       ? 'text-primary neon-text-primary'
                       : 'text-foreground/80 hover:text-primary'
@@ -127,7 +125,7 @@ const Navbar = ({ theme, toggleTheme }) => {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
                       className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 bg-background/95 backdrop-blur-sm border border-border/60 rounded-lg shadow-lg ${
-                        item.megamenu ? 'w-[56rem] p-6' : 'w-56'
+                        item.megamenu ? 'w-full max-w-4xl md:w-[56rem] p-2 md:p-6 overflow-x-auto max-h-[60vh] md:max-h-[70vh] overflow-y-auto' : 'w-56 max-h-[60vh] overflow-y-auto'
                       }`}
                     >
                       {item.submenu && item.submenu.map((subItem) => (
@@ -141,7 +139,7 @@ const Navbar = ({ theme, toggleTheme }) => {
                         </Link>
                       ))}
                       {item.megamenu && (
-                        <div className="grid grid-cols-3 gap-6">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 md:gap-6 min-w-[260px]">
                           {Object.entries(item.megamenu).map(([category, subItems]) => (
                             <div key={category}>
                               <h3 className="text-lg font-bold text-primary mb-3 px-2">{category}</h3>
@@ -151,7 +149,7 @@ const Navbar = ({ theme, toggleTheme }) => {
                                     <Link
                                       to={subItem.path}
                                       onClick={closeDropdowns}
-                                      className="block w-full text-left px-2 py-1.5 text-sm text-foreground/80 hover:text-primary hover:bg-secondary/30 rounded-md transition-colors"
+                                      className="block w-full text-left px-2 py-2 text-xs md:text-sm text-foreground/80 hover:text-primary hover:bg-secondary/30 rounded-md transition-colors min-h-[44px] min-w-[44px]"
                                     >
                                       {subItem.name}
                                     </Link>
@@ -170,11 +168,11 @@ const Navbar = ({ theme, toggleTheme }) => {
           </div>
           
           <div className="flex items-center">
-            <Button variant="ghost" size="icon" onClick={toggleTheme} className="text-foreground/80 hover:text-primary ml-2 md:ml-4">
+            <Button variant="ghost" size="icon" onClick={toggleTheme} className="text-foreground/80 hover:text-primary ml-1 sm:ml-2 md:ml-4 min-h-[44px] min-w-[44px]">
               {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
             </Button>
-            <div className="md:hidden ml-2">
-              <Button variant="ghost" size="icon" onClick={() => setIsOpen(!isOpen)} className="text-foreground/80 hover:text-primary">
+            <div className="md:hidden ml-1 sm:ml-2">
+              <Button variant="ghost" size="icon" onClick={() => setIsOpen(!isOpen)} className="text-foreground/80 hover:text-primary min-h-[44px] min-w-[44px]">
                 {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </Button>
             </div>
@@ -187,15 +185,15 @@ const Navbar = ({ theme, toggleTheme }) => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-background/95 backdrop-blur-md border-t border-border/50"
+            className="md:hidden bg-background/95 backdrop-blur-md border-t border-border/50 w-full overflow-x-hidden"
           >
-            <div className="px-2 pt-2 pb-3 space-y-1">
+            <div className="px-1 sm:px-2 pt-2 pb-3 space-y-1">
               {menuItems.map((item) => (
                 <div key={item.name}>
                   <Link
                     to={item.path}
                     onClick={() => handleLinkClick(!!(item.submenu || item.megamenu))}
-                    className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                    className={`block px-2 sm:px-3 py-2 rounded-md text-base font-medium transition-colors min-h-[44px] min-w-[44px] ${
                       location.pathname.startsWith(item.path) && item.path !== '/' || location.pathname === item.path
                         ? 'text-primary neon-text-primary'
                         : 'text-foreground/80 hover:text-primary'
@@ -206,7 +204,7 @@ const Navbar = ({ theme, toggleTheme }) => {
                   {(item.submenu || item.megamenu) && (
                      <div className="pl-4 mt-1 space-y-1">
                         {item.submenu?.map((subItem) => (
-                           <Link key={subItem.name} to={subItem.path} onClick={closeMobileMenu} className="block px-3 py-1.5 text-sm text-foreground/70 hover:text-primary rounded-md transition-colors">
+                           <Link key={subItem.name} to={subItem.path} onClick={closeMobileMenu} className="block px-2 sm:px-3 py-2 text-xs md:text-sm text-foreground/70 hover:text-primary rounded-md transition-colors min-h-[44px] min-w-[44px]">
                             {subItem.name}
                           </Link>
                         ))}
@@ -214,7 +212,7 @@ const Navbar = ({ theme, toggleTheme }) => {
                           <div key={category} className="pt-1">
                             <h4 className="font-semibold text-primary text-sm px-3 py-1">{category}</h4>
                               {subItems.map(subItem => (
-                                <Link key={subItem.name} to={subItem.path} onClick={closeMobileMenu} className="block px-3 py-1.5 ml-2 text-sm text-foreground/70 hover:text-primary rounded-md transition-colors">
+                                <Link key={subItem.name} to={subItem.path} onClick={closeMobileMenu} className="block px-2 sm:px-3 py-2 ml-2 text-xs md:text-sm text-foreground/70 hover:text-primary rounded-md transition-colors min-h-[44px] min-w-[44px]">
                                   {subItem.name}
                                 </Link>
                               ))}

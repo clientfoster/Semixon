@@ -41,35 +41,29 @@ const About = () => {
 
   const leadership = [
     {
-      name: 'Dr. Sarah Chen',
-      position: 'Chief Executive Officer',
-      experience: '20+ years in semiconductor industry',
-      image: 'Professional CEO portrait in modern office setting'
+      name: 'VENKATESWARLU KATARI',
+      position: 'Founder & Operations Head ',
+      experience: '12+ years Expirence',
+      image: 'public/venkat-profile.jpg'
     },
     {
-      name: 'Michael Rodriguez',
-      position: 'Chief Technology Officer',
-      experience: '15+ years in engineering leadership',
-      image: 'Technology executive in high-tech laboratory environment'
+      name: 'M.AMARNATH REDDY',
+      position: 'Regional Sales Manager – Bangalore',
+      experience: '11+ years Expirence',
+      image: '/amar.jpg'
     },
     {
-      name: 'Dr. Priya Patel',
-      position: 'VP of Research & Development',
-      experience: '18+ years in R&D and innovation',
-      image: 'Research director in advanced technology lab'
+      name: 'ANAND.B',
+      position: 'Full Stack Developer',
+      experience: '2+ years of Expirence in Web Development',
+      image: '/anand.jpg'
     },
-    {
-      name: 'James Thompson',
-      position: 'VP of Operations',
-      experience: '12+ years in global operations',
-      image: 'Operations executive in modern corporate setting'
-    }
   ];
 
   return (
     <div className="min-h-screen pt-16">
       {/* Hero Section */}
-      <section className="py-20 relative overflow-hidden">
+      <section className="relative overflow-hidden min-h-screen flex items-center justify-center">
         <div className="absolute inset-0">
           {[...Array(30)].map((_, i) => (
             <div
@@ -87,7 +81,7 @@ const About = () => {
           ))}
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -102,12 +96,12 @@ const About = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="flex flex-col items-center justify-center w-full">
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="space-y-6"
+              className="space-y-6 w-full max-w-4xl mx-auto text-center"
             >
               <h2 className="text-3xl font-bold text-white">Our Story</h2>
               <p className="text-gray-400 text-lg leading-relaxed">
@@ -121,41 +115,21 @@ const About = () => {
                 the next generation of technology. From automotive systems to consumer electronics, 
                 our expertise spans multiple industries and applications.
               </p>
+              <p className="text-gray-400 text-lg leading-relaxed">
+                Over the years, our relentless pursuit of excellence has enabled us to build a diverse team of experts, foster long-term partnerships, and consistently deliver results that exceed expectations. We invest heavily in research and development, ensuring that our solutions remain at the forefront of technological advancement. Our commitment to quality, integrity, and customer satisfaction drives every project we undertake, no matter the scale or complexity.
+              </p>
+              <p className="text-gray-400 text-lg leading-relaxed">
+                As we look to the future, NXTsilicon remains dedicated to shaping the world through technology, empowering businesses to innovate, and making a positive impact on society. We invite you to join us on this exciting journey and discover how our passion for engineering can help turn your vision into reality.
+              </p>
               <Button
                 onClick={handleClick}
-                className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 neon-glow"
+                className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 neon-glow mx-auto"
               >
                 Learn More About Our Journey
               </Button>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
-              <div className="glass neon-border rounded-2xl p-8 hover-lift">
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold gradient-text">500+</div>
-                    <div className="text-gray-400">Engineers</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold gradient-text">15+</div>
-                    <div className="text-gray-400">Years</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold gradient-text">50+</div>
-                    <div className="text-gray-400">Clients</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold gradient-text">1000+</div>
-                    <div className="text-gray-400">Projects</div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
+            {/* Removed stats box section here */}
           </div>
         </div>
       </section>
@@ -216,8 +190,8 @@ const About = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {leadership.map((leader, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {leadership.slice(0, 3).map((leader, index) => (
               <motion.div
                 key={leader.name}
                 initial={{ opacity: 0, y: 50 }}
@@ -228,7 +202,18 @@ const About = () => {
                 className="glass neon-border rounded-xl overflow-hidden hover-lift cursor-pointer"
                 onClick={handleClick}
               >
-                <div className="h-64 bg-gradient-to-br from-green-400/20 to-blue-500/20">
+                <div className="relative h-[28rem] bg-gradient-to-br from-green-400/20 to-blue-500/20 overflow-hidden">
+                  {leader.image ? (
+                    <img
+                      src={leader.image.startsWith('/') ? leader.image : `/${leader.image.replace(/^public\//, '')}`}
+                      alt={leader.name}
+                      className="absolute inset-0 w-full h-full object-cover shadow-lg border-4 border-white/20 bg-white/10"
+                    />
+                  ) : (
+                    <div className="h-40 w-40 rounded-full bg-gray-700 flex items-center justify-center text-5xl text-white/50 mx-auto my-auto">
+                      {leader.name[0]}
+                    </div>
+                  )}
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-white mb-2">{leader.name}</h3>
@@ -260,12 +245,8 @@ const About = () => {
 
           <div className="space-y-12">
             {[
-              { year: '2009', title: 'Company Founded', description: 'Started with a vision to revolutionize semiconductor design services.' },
-              { year: '2012', title: 'First Major Client', description: 'Secured partnership with leading automotive semiconductor company.' },
-              { year: '2015', title: 'Global Expansion', description: 'Opened offices in Silicon Valley and expanded international presence.' },
-              { year: '2018', title: 'Innovation Labs', description: 'Launched dedicated R&D facilities for next-generation technologies.' },
-              { year: '2021', title: 'Industry Recognition', description: 'Received multiple awards for engineering excellence and innovation.' },
-              { year: '2024', title: 'Future Forward', description: 'Continuing to lead the industry with cutting-edge solutions.' }
+              { year: '2025', title: 'First Major Client', description: '.' },
+              { year: '2023', title: 'Global Expansion', description: 'Opened offices in Silicon Valley and expanded international presence.' },
             ].map((milestone, index) => (
               <motion.div
                 key={milestone.year}
@@ -305,10 +286,10 @@ const About = () => {
               Be part of a team that's shaping the future of technology. Explore career opportunities at NXTsilicon.
             </p>
             <Button
-              onClick={handleClick}
+              asChild
               className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 neon-glow text-white px-12 py-4 text-lg"
             >
-              View Open Positions
+              <a href="/contact">View Open Positions</a>
             </Button>
           </motion.div>
         </div>
