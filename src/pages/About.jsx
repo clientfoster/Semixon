@@ -60,6 +60,11 @@ const About = () => {
     },
   ];
 
+  const milestones = [
+    { year: '2024', title: 'Company Founded', description: 'Started with a vision to revolutionize semiconductor design services.' },
+    { year: '2025', title: 'First Major Client', description: 'Secured partnership with leading automotive semiconductor company.' },
+  ];
+
   return (
     <div className="min-h-screen pt-16">
       {/* Hero Section */}
@@ -244,10 +249,7 @@ const About = () => {
           </motion.div>
 
           <div className="space-y-12">
-            {[
-              { year: '2025', title: 'First Major Client', description: '.' },
-              { year: '2023', title: 'Global Expansion', description: 'Opened offices in Silicon Valley and expanded international presence.' },
-            ].map((milestone, index) => (
+            {milestones.map((milestone, index) => (
               <motion.div
                 key={milestone.year}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
