@@ -93,7 +93,7 @@ const About = () => {
             className="text-center mb-16"
           >
             <h1 className="text-5xl md:text-6xl font-bold gradient-text mb-6">
-              About NXTsilicon
+              About Semixon
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto">
               Pioneering technology solutions since 2009, we've been at the forefront of 
@@ -110,7 +110,7 @@ const About = () => {
             >
               <h2 className="text-3xl font-bold text-white">Our Story</h2>
               <p className="text-gray-400 text-lg leading-relaxed">
-                Founded with a vision to revolutionize the semiconductor industry, NXTsilicon Technologies 
+                Founded with a vision to revolutionize the semiconductor industry, Semixon Technologies 
                 has grown from a small startup to a global leader in engineering services. Our journey 
                 began with a simple belief: that innovation thrives when brilliant minds collaborate 
                 to solve complex challenges.
@@ -124,7 +124,7 @@ const About = () => {
                 Over the years, our relentless pursuit of excellence has enabled us to build a diverse team of experts, foster long-term partnerships, and consistently deliver results that exceed expectations. We invest heavily in research and development, ensuring that our solutions remain at the forefront of technological advancement. Our commitment to quality, integrity, and customer satisfaction drives every project we undertake, no matter the scale or complexity.
               </p>
               <p className="text-gray-400 text-lg leading-relaxed">
-                As we look to the future, NXTsilicon remains dedicated to shaping the world through technology, empowering businesses to innovate, and making a positive impact on society. We invite you to join us on this exciting journey and discover how our passion for engineering can help turn your vision into reality.
+                As we look to the future, Semixon remains dedicated to shaping the world through technology, empowering businesses to innovate, and making a positive impact on society. We invite you to join us on this exciting journey and discover how our passion for engineering can help turn your vision into reality.
               </p>
               <Button
                 onClick={handleClick}
@@ -191,7 +191,7 @@ const About = () => {
               Leadership Team
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Meet the visionaries driving innovation and excellence at NXTsilicon Technologies.
+              Meet the visionaries driving innovation and excellence at Semixon Technologies.
             </p>
           </motion.div>
 
@@ -285,7 +285,7 @@ const About = () => {
               Join Our Mission
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Be part of a team that's shaping the future of technology. Explore career opportunities at NXTsilicon.
+              Be part of a team that's shaping the future of technology. Explore career opportunities at Semixon.
             </p>
             <Button
               asChild

@@ -93,7 +93,7 @@ const Navbar = ({ theme, toggleTheme }) => {
             <motion.div whileHover={{ scale: 1.05 }}>
               <Link to="/" className="flex items-center space-x-2" onClick={() => handleLinkClick(false)}>
                 <img src="/logo.png" alt="Logo" className="w-8 h-8 object-contain" />
-                <span className="text-xl font-bold gradient-text">NXTsilicon</span>
+                <span className="text-xl font-bold gradient-text">Semixon</span>
               </Link>
             </motion.div>
           </div>

@@ -17,7 +17,7 @@ const ContactMethods = () => {
       icon: Mail,
       title: 'Email Us',
       description: 'Send us an email and we\'ll respond within 24 hours.',
-      contact: 'info@NXTsilicon.com',
+      contact: 'info@Semixon.com',
       action: 'Send Email',
       gradient: 'from-blue-500 to-purple-600'
     },

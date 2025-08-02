@@ -72,7 +72,7 @@ const Footer = ({ theme }) => {
             >
               <div className="flex items-center space-x-2">
                 <img src="/logo.png" alt="Logo" className="w-7 h-7 sm:w-8 sm:h-8 object-contain" />
-                <span className="text-xl sm:text-2xl font-bold gradient-text">NXTsilicon</span>
+                <span className="text-xl sm:text-2xl font-bold gradient-text">Semixon</span>
               </div>
               <p className={`${theme === 'light' ? 'text-black' : 'text-gray-400'} max-w-md text-xs sm:text-sm md:text-base`}>
                 Leading provider of engineering services, semiconductor solutions, and technology consulting. 
@@ -82,7 +82,7 @@ const Footer = ({ theme }) => {
               <div className="space-y-2">
                 <div className={`flex items-center space-x-2 ${theme === 'light' ? 'text-black' : 'text-gray-400'} text-xs sm:text-sm`}>
                   <Mail className="w-4 h-4 text-green-400" />
-                  <span>info@NXTsilicon.com</span>
+                  <span>info@Semixon.com</span>
                 </div>
                 <div className={`flex items-center space-x-2 ${theme === 'light' ? 'text-black' : 'text-gray-400'} text-xs sm:text-sm`}>
                   <Phone className="w-4 h-4 text-green-400" />
@@ -166,7 +166,7 @@ const Footer = ({ theme }) => {
           className="border-t border-gray-800 mt-8 sm:mt-12 pt-6 sm:pt-8 flex flex-col md:flex-row justify-between items-center gap-y-2"
         >
           <p className={`${theme === 'light' ? 'text-black' : 'text-gray-400'} text-xs sm:text-sm`}>
-            © 2025 NXTsilicon Technologies. All rights reserved.
+            © 2025 Semixon Technologies. All rights reserved.
           </p>
           <div className="flex flex-wrap space-x-4 sm:space-x-6 mt-2 sm:mt-0">
             <button onClick={handleLinkClick} className={`${theme === 'light' ? 'text-black' : 'text-gray-400'} hover:text-green-400 text-sm transition-colors`}>

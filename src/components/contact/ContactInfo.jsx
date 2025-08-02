@@ -19,12 +19,12 @@ const ContactInfo = () => {
   ];
 
   const departments = [
-    { name: 'General Inquiries', email: 'info@NXTsilicon.com' },
-    { name: 'Sales & Business Development', email: 'sales@NXTsilicon.com' },
-    { name: 'Technical Support', email: 'support@NXTsilicon.com' },
-    { name: 'Careers & HR', email: 'careers@NXTsilicon.com' },
-    { name: 'Media & Press', email: 'press@NXTsilicon.com' },
-    { name: 'Partnerships', email: 'partnerships@NXTsilicon.com' }
+    { name: 'General Inquiries', email: 'info@Semixon.com' },
+    { name: 'Sales & Business Development', email: 'sales@Semixon.com' },
+    { name: 'Technical Support', email: 'support@Semixon.com' },
+    { name: 'Careers & HR', email: 'careers@Semixon.com' },
+    { name: 'Media & Press', email: 'press@Semixon.com' },
+    { name: 'Partnerships', email: 'partnerships@Semixon.com' }
   ];
 
   return (
