@@ -33,7 +33,7 @@ const ContactMethods = () => {
       icon: MapPin,
       title: 'Visit Us',
       description: 'Come visit our headquarters in Silicon Valley.',
-      contact: 'H No 6-3-200/A, PREM NAGAR, Banjara Hills, Khairatabad, Hyderabad- 500034, Telangana',
+      contact: 'Plot No: 205, 2nd floorNo 1, Sapthagiri Arcade, Hoodi, Village, ITPL Main Rd, Mahadevapura, Bengaluru, Karnataka 560048',
       action: 'Get Directions',
       gradient: 'from-orange-500 to-red-600'
     }
