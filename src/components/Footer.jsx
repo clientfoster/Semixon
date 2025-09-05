@@ -90,7 +90,9 @@ const Footer = ({ theme }) => {
                 </div>
                 <div className={`flex items-center space-x-2 ${theme === 'light' ? 'text-black' : 'text-gray-400'} text-xs sm:text-sm`}>
                   <MapPin className="w-4 h-4 text-green-400" />
-                  <span>H No 6-3-200/A, PREM NAGAR, Banjara Hills, Khairatabad, Hyderabad- 500034, Telangana</span>
+                  <span>Plot No: 205, 2nd floorNo 1, Sapthagiri Arcade, 
+Hoodi, Village, ITPL Main Rd, 
+Mahadevapura, Bengaluru, Karnataka 560048</span>
                 </div>
               </div>
 
